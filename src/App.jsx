@@ -1,13 +1,17 @@
 // src/App.jsx
 import './App.css';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero'; // <-- 1. Import it here!
+import Hero from './components/Hero';
+import Stats from './components/Stats'; 
+import HiringPartners from './components/HiringPartners'; 
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Hero /> {/* <-- 2. Add it directly under the Navbar! */}
+      <Hero />
+      <Stats /> 
+      <HiringPartners />
     </div>
   );
 }
