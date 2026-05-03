@@ -1,19 +1,17 @@
-// src/App.jsx
-import './App.css';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Stats from './components/Stats'; 
-import HiringPartners from './components/HiringPartners'; 
+import Hero from './components/Hero'; //  IIT Mandi banner
+import MainHero from './components/MainHero'; // The new dark text & cards
+import InstitutionalPartners from './components/InstitutionalPartners'; // The white logos
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Hero />
-      <Stats /> 
-      <HiringPartners />
-    </div>
-  );
+      <Hero /> 
+      <MainHero />
+      <InstitutionalPartners />
+    </>
+  )
 }
 
 export default App;

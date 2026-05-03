@@ -1,8 +1,13 @@
-// src/components/HiringPartners.jsx
 import './HiringPartners.css';
 
-// A list of fake companies for now!
-const companies = ['Amazon', 'Google', 'Microsoft', 'Swiggy', 'Ola', 'Uber', 'Flipkart', 'Zomato'];
+// These are actual image links of company logos!
+const companyLogos = [
+  "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+  "https://masai-website-images.s3.ap-south-1.amazonaws.com/amazon_rect_9e0cd101b1.svg",
+  "https://masai-website-images.s3.ap-south-1.amazonaws.com/swiggy_rect_26c29f71f1.svg",
+  "https://masai-website-images.s3.ap-south-1.amazonaws.com/dream11_rect_10204b6b66.svg",
+  "https://masai-website-images.s3.ap-south-1.amazonaws.com/ola_rect_b4a1b02bb5.svg"
+];
 
 export default function HiringPartners() {
   return (
@@ -11,10 +16,9 @@ export default function HiringPartners() {
       
       <div className="marquee">
         <div className="marquee-content">
-          {/* We double the list so the scrolling loop is perfectly seamless */}
-          {[...companies, ...companies].map((company, index) => (
-            <div className="company-logo" key={index}>
-              {company}
+          {[...companyLogos, ...companyLogos].map((logoUrl, index) => (
+            <div className="company-logo" key={index} style={{background: 'transparent', boxShadow: 'none'}}>
+              <img src={logoUrl} alt="Company Logo" style={{ height: '40px' }} />
             </div>
           ))}
         </div>

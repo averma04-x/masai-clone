@@ -1,27 +1,32 @@
-// src/components/Hero.jsx
 import './Hero.css';
 
 export default function Hero() {
   return (
-    <section className="hero-container">
-      <div className="hero-content">
-        <h1>Driven by Outcomes, <br/><span>Fueled by Ambition.</span></h1>
-        <p>
-          Launch your career in Tech with Masai School. No upfront fees, 
-          pay only when you get hired.
-        </p>
-        <div className="hero-buttons">
-          <button className="primary-btn">Apply Now</button>
-          <button className="secondary-btn">View Courses</button>
+    <div className="hero-dark-bg">
+      <div className="hero-image-card">
+        
+        {/* Green Admission Timer Badge */}
+        <div className="admission-badge">
+          <span className="diamond">✦</span> 
+          Admission Closes In 
+          <span className="timer-box">7 Days</span> 
+          <span className="timer-box">0 Hours</span> 
+          <span className="diamond">✦</span>
         </div>
-      </div>
-      
-      <div className="hero-image">
-        {/* We will use a placeholder box here until you download the real image */}
-        <div className="image-placeholder">
-          <p>🎓 Student Graphic Goes Here</p>
+
+        {/* Text Content */}
+        <h1 className="hero-heading">Think you're ready for 60 days at IIT Mandi?</h1>
+        <p className="hero-subheading">Not just a course, a full IIT campus experience</p>
+
+        {/* Bottom Tags */}
+        <div className="hero-tags">
+          <span className="tag-outline">Fully Residential</span>
+          <span className="tag-outline">Taught By IIT Mandi Faculty</span>
+          <span className="tag-outline">CCE, IIT Mandi Certification</span>
+          <span className="tag-outline">Real Projects & Real Demos</span>
         </div>
+
       </div>
-    </section>
+    </div>
   );
 }

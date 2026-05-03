@@ -1,0 +1,56 @@
+.partners-white-section {
+  background-color: #ffffff; /* Bright white background */
+  padding: 3rem 0;
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+}
+
+.partners-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Fades the left and right edges so logos slide in and out smoothly */
+.partners-marquee::before,
+.partners-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+}
+.partners-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+.partners-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.partners-marquee-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 5rem;
+  animation: slide-left 30s linear infinite;
+}
+
+.partner-logo-box img {
+  height: 60px; /* Forces all logos to be the same height */
+  max-width: 200px;
+  object-fit: contain;
+  filter: grayscale(100%); /* removes color until hover */
+  transition: filter 0.3s ease;
+}
+
+.partner-logo-box img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes slide-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
