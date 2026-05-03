@@ -1,0 +1,28 @@
+/* src/components/Stats.css */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 5%;
+  background-color: var(--white);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap; /* This makes it stack nicely on smaller screens */
+  gap: 2rem;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  font-size: 2.5rem;
+  color: var(--masai-red);
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  font-weight: 600;
+}
